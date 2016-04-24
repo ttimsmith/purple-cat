@@ -9,7 +9,7 @@
 @threadlist-bg: #FFFFFF;
 @messagelist-bg: tint(@sidebar, 95%);
 @active-thread-text: @sidebar;
-@sidebar-text: desaturate(lighten(@sidebar, 40%), 75%);
+@sidebar-text: lighten(@sidebar, 40%);
 @active-sidebar-text: #FFFFFF;
 @border-color: fade(@sidebar, 10%);
 @danger: #FF5F56;
@@ -48,6 +48,9 @@
   // relate to the sidear, not the column
   position: relative;
   margin: @sidebar-margin;
+  .is-blurred & {
+    opacity: .6;
+  }
 }
 
 .nylas-outline-view {
@@ -771,6 +774,7 @@ body.platform-win32 .sheet-toolbar-container .btn-toolbar:hover {
 .btn-emphasis {
   background: @accent !important;
   border-color: darken(@accent, 5%) !important;
+  border-radius: 2px;
 }
 
 .button-dropdown.btn-emphasis .primary-item,
