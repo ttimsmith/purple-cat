@@ -1,6 +1,6 @@
 {
-  "name": "ui-darkside",
-  "displayName": "Purple Cat",
+  "name": "ui-twist",
+  "displayName": "Twist",
   "theme": "ui",
   "version": "1.0.1",
   "description": "A minimal theme for Nylas N1",
@@ -8,6 +8,6 @@
   "engines": {
     "nylas": "*"
   },
-  "styleSheets": ["darkside"],
+  "styleSheets": ["twist"],
   "private": true
 }
