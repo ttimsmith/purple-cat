@@ -3,8 +3,8 @@
 //====================================================
 
 // Default
-@sidebar: #313042;
-@accent: #F18260;
+@sidebar: #483d8b;
+@accent: darksalmon;
 
 // Luna
 // @sidebar: #202C46;
@@ -36,7 +36,7 @@
 @minimize: #FBD852;
 @maximize: #8DD07D;
 @swipe-archive: #8DD07D;
-@swipe-snooze: #FBD852;
+@swipe-snooze: #4a246b;
 @swipe-trash: @danger;
 @invalid: @danger;
 
@@ -90,19 +90,16 @@
 .toolbar-window-controls button {
   background-color: @sidebar-text;
   background-image: none !important;
+  border-radius: 50%;
   float: none;
   opacity: 0.5;
   margin: 0;
-  transform: scaleY(0.5);
-  border-radius: 2px;
   transition-duration: 150ms;
-  transition-property: border-radius, opacity, transform;
+  transition-property: opacity;
 }
 
 .toolbar-window-controls:hover button {
   opacity: 1;
-  border-radius: 50%;
-  transform: scaleY(1);
 }
 
 .toolbar-window-controls .close {
@@ -137,6 +134,11 @@
   &:hover {
     opacity: 1;
   }
+}
+
+// Toolbar Buttons Override
+.sheet-toolbar .btn-toolbar {
+  background: white;
 }
 
 // Compose button icon color
@@ -780,4 +782,20 @@ body.platform-win32 .sheet-toolbar-container .btn-toolbar:hover {
 
 .btn-toolbar.mode-toggle.mode-false img.content-mask {
   background-color: @accent;
+}
+
+//====================================================
+//  Buttons
+//====================================================
+
+.btn-emphasis {
+  background: @accent;
+  border-color: darken(@accent, 5%);
+}
+
+.button-dropdown.btn-emphasis .primary-item,
+.button-dropdown.btn-emphasis .secondary-picker,
+.button-dropdown.btn-emphasis .only-item {
+  background: @accent;
+  border-color: darken(@accent, 5%);
 }
